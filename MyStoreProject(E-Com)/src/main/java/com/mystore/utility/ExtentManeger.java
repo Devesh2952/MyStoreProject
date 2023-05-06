@@ -18,18 +18,18 @@ public class ExtentManeger {
 	public void startReport() throws IOException {
 		
 		htmlReporter = new ExtentSparkReporter(
-				System.getProperty("user.dir") + "\\test-output\\ExtentReport\\"+"myExtentReport.html");
-		// htmlReporter.loadXMLConfig(System.getProperty("user.dir")+"/extend-report.xml");
-		htmlReporter.config().setDocumentTitle("My Store Project");
-		htmlReporter.config().setReportName("My Store Project Report");
-		htmlReporter.config().setTheme(Theme.DARK);
+				System.getProperty("user.dir") + "\\test-output\\ExtentReport\\" + "myExtentReport_AllTestCases.html");
+		htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "/extend-report.xml");
+//		htmlReporter.config().setDocumentTitle("My Store Project");
+//		htmlReporter.config().setReportName("My Store Project Report");
+//		htmlReporter.config().setTheme(Theme.DARK);
 
 		reports = new ExtentReports();
 		reports.attachReporter(htmlReporter);
 
 		reports.setSystemInfo("HostName", "MyHost");
 		reports.setSystemInfo("ProjectName", "MyStoreProject");
-		reports.setSystemInfo("Tester", "Hitendra");
+		reports.setSystemInfo("Tester", "Devesh Sahare");
 		reports.setSystemInfo("OS", "Win10");
 		reports.setSystemInfo("Browser", "Chrome");
 				
